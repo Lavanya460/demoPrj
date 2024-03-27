@@ -1,0 +1,26 @@
+//Bubble sort//
+
+#include <stdio.h>
+int main()
+{ 
+   int a[]={2,4,6,8,9,7,5,1,};
+   int len= sizeof(a)/sizeof(a[0]);
+   int temp;
+   for(int i=0;i<len-1;i++)
+   {
+      for(int j=0;j<len-i-1;j++)
+      {
+          if(a[j]>a[j+1])
+          {
+              temp = a[j+1];
+              a[j+1] = a[j];
+              a[j] = temp;
+          }
+      }
+   }
+   printf("The sorted list:");
+   for(int x=0;x<len;x++)
+   { 
+        printf("%d",a[x]);
+   }               
+}

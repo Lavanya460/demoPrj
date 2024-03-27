@@ -1,0 +1,41 @@
+Assignment 1: Pseudocode and Flowchart for Sorting Algorithm-Write pseudocode and create a flowchart for a bubble sor algorithm. Provide a brief explantion of how the algoithm works and a simple array of intergers to demonstrate a dry run of your algorithm.
+------------------------------------------------------------------------------------------------------------------------------
+//Pseudocode for bubbble sort//
+BEGIN
+BubbleSort(array,num)
+      int i, j;
+      for(i=0;i<n-1;i++)
+          for(j=0;j<n-i;j++)
+               if(arr[j] >arr[j+1])
+                   arr[j]=arr[j] + arr[j+1];
+                   arr[j+1]=arr[j] - arr[j+1];
+                   arr[j]=arr[j] - arr[j+1];
+END
+-----------------------------------------------------------------
+//Explanation//
+Bubble sort is a simple sorting algorithm that repeatedly steps through the list to be sorted, compars each pair of adjacent items, and swaps them if they are in the wrong order. This process is repested for each pair of adjacent elements until the entire list is sorted.
+The algorithm works as follows:
+Start from the beginning of the array.
+compare the current element with the next element.
+If the current element is greater than the next element, swap them.
+Move to the next pair of elements and repeat steps 2 and 3.
+Continue this process for each pair of adjacent elements until the entire array is sorted.
+--------------------------------------------------------------------------------------------------
+//Example//
+Let's demonstrate the bubble sort algorithm with an array of integers:[6,3,9,4,1]
+It-1:
+compare 6 and 3(6>3),swap them:[3,6,9,4,1]
+compare 6 and 9(6<9) (no swap):[3,6,9,4,1]
+compare 9 and 4(9>4),swap them:[3,6,4,9,1]
+compare 9 and 1(9>1),swap them:[3,6,4,1,9]
+It-2:
+compare 3 and 6(3<6) (no swap):[3,6,4,1,9]
+compare 6 and 4(6>4),swap them:[3,4,6,1,9]
+compare 6 and 1(6>1),swap them:[3,4,1,6,9]
+compare 6 and 9(6<9) (no swap):[3,4,1,6,9]
+It-3:
+compare 3 and 4(3<4) (no swap):[3,4,1,6,9]
+compare 4 and 1(4>1),swap them:[3,1,4,6,9]
+It-4:
+compare 3 and 1(3>1),swap them:[1,3,4,6,9]
+The arrayis now sorted as:[1,3,4,6,9}]

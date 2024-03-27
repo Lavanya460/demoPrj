@@ -1,0 +1,36 @@
+// Binary search algorithm//
+1.Start
+2.inititalize left=0 and right=last
+  element index-1 and position=-1
+3.repeat step 4 and 5 while left <=right
+4.set mid=(left+ right)/2
+5.if a[mid] =val
+        set position =val
+        print position
+        goto step 7
+   else if a[mid] > val
+            set right =mid-1
+        else
+            set left =mid+1
+6.if position =-1
+     print "value is not found"
+7.stop
+
+
+
+
+//Psuedocoe//
+Begin
+function binary-search(Array, Val)
+     left=0, right =length(Array)-1
+     while left<=right:
+     mid=(left+right)//2
+     if Array[mid]== Val:
+         return mid
+     else if Array[mid]>Val:
+         left=mid+1
+     else:
+         right=mid-1
+     return-1
+End             
+                                

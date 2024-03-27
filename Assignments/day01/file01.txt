@@ -1,0 +1,35 @@
+// Algorithm for checking odd numbers upto 20//
+
+
+
+
+ 1. START
+ 2. INPUT i=1, n=20;
+ 3. IF i> 20 TEHN GOTO STEP 8
+ 4. ELSE IF i%2!=0;
+ 5. PRINT i;
+ 6. INCREMENT i BY 1 
+     GOTO STEP3
+ 7. ELSE GOTO STEP 8
+ 8. STOP3 
+ 
+ // Algorithm for prime number or not//
+ 
+ 1.START
+ 2.READ N
+ 3.INITIALIZE i=2, SET FLAG=TRUE;
+ 4.IF i<N
+ 5.IF N%I=0 GOTO NEXT STEP6
+ 6.SET FLAG=FALSE;BREAK AND GOTO STEP10
+ 7.ELSE INCREMENT i BY 1 AND GOTO STEP 4
+ 8.CHECK IF FLAG=TRUE
+ 9.PRINT N
+ 10.ELSE STOP
+
+
+
+
+
+
+
+

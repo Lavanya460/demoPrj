@@ -1,0 +1,49 @@
+Assignment 2:Recrusive analysis-Write a recrusive function pseudocode and calculate the nth Fibonacci number and use Big O notation to analyze its efficiency. Compare this with an iterative approach and discuss the pros and cons in terms of space and time complexity.
+-------------------------------------------------------------------
+//Pseudocode for recrusive function for nth Fibonacci number//
+BEGIN
+function fibonacci(n)
+     if n <=1
+        return n
+     else
+        return fibonacci(n-1) + fibonacci(n-2)
+     END if
+END function
+END
+-----------------------------------------------------
+//code to calculate nth Fibonacci number//
+#include<stdio.h>
+int fibonacci(int n) {
+    if(n<=1)
+        return n;
+    else
+        return fibonacci(n-1) + fibonacci(n-2);
+}
+int main() {
+   int n;
+   print("Enter the value of n: ");
+   scanf("%d",&n);
+   printf("The %dth Fibonacci number is: %d\n",n,fibonacci(n));
+   return 0;
+}
+-------------------------------------------------------------------------
+//Efficiency Analysis//
+The time complexity of teh recrusive Fibonacci function here is O(2^n).
+This is because each call branches into two recrusive calls, creating stack frame's stack increases the number of function calls as n increases.
+The space complexity of the reruisve Fibonacci function is O(n) due to the function call stack.
+--------------------------------------------------------------------------------------------------
+//Comparison between recrusive nad Iterative Approach//
+The time complexity of an iterative approach for calculating the nth Fibonacci number is O(n). Whereas the time complexity of an recrusive approach for calculating the nth Fibonaci number is O(2^n).
+
+Iterative approach involves iterating through a loop n times to compute the Fibonacci number. Recrusive approach involves making (n-1) and (n-2) function calls function multiple times to compute the Fibonacci number.
+
+The space complexity of the iterative approach is O(1). Whereas the space complexity of the recrusive approach is O(n).
+ 
+ Iterative approach requirs only a constant amount of space for storing a few variables like the current Fibonacci number, the previous Fibonacci number. Recrusive approach requires more space as it needs to store all the intermediate values in the stack frames wich results in higher space complexit ---------------------------------------------------------------------------------------------------------------  
+ //Pros and cons//
+ Recrusive approach:
+ Pros : The implementation of recrusive function is very simple. The code is easy to understand and write.
+ Cons : Takes more memory(due to function calls). Slower execution time. It has high time complexity which makes it inefficient for large iput data.
+ Iterative Approach:
+ Pros : Efficiency uses memory as it doesn't use extra space like recrusion. The execution time also Fast.
+ Cons : The implementation is more complex as compare to recrusive approach.                     
